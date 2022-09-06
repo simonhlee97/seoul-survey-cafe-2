@@ -1,0 +1,76 @@
+---
+import Card from './Card.astro'
+
+const seedData = [
+	{
+		id: 1,
+		username: 'Tom',
+		image: 'https://www.hyperui.dev/photos/man-4.jpeg',
+		status: 'resident',
+		rating: 76,
+		createdAt: '2 days ago',
+		comment:
+			'I have lived here for 10 years, and call it home. It has great schools and food, and easy to access parks and public transportation.',
+	},
+	{
+		id: 2,
+		username: 'Jerry',
+		image: 'https://www.hyperui.dev/photos/man-4.jpeg',
+		status: 'visitor',
+		rating: 68,
+		createdAt: '3 days ago',
+		comment: 'This neighborhood is okay. Too many people though.',
+	},
+	{
+		id: 3,
+		username: 'Mick',
+		image: 'https://www.hyperui.dev/photos/man-3.jpeg',
+		status: 'resident',
+		rating: 55,
+		createdAt: '4 days ago',
+		comment: 'This place was terrible. Just a total cesspool. I will never go back.',
+	},
+	{
+		id: 4,
+		username: 'Quagmire',
+		image: 'https://www.hyperui.dev/photos/man-1.jpeg',
+		status: 'resident',
+		rating: 99,
+		createdAt: '5 days ago',
+		comment: 'I really like this place. Awesome place to live. It is perfect.',
+	},
+	{
+		id: 5,
+		username: 'PeterGriffin',
+		image: 'https://www.hyperui.dev/photos/man-2.jpeg',
+		status: 'visitor',
+		rating: 87,
+		createdAt: '6 days ago',
+		comment:
+			'This place has some outstanding food, and the poeple are friendly and open to diversity.',
+	},
+]
+---
+
+<section class="reviews">
+	{
+		seedData.map((review) => (
+			<Card>
+				<div class="flex items-center">
+					<img
+						class="h-16 w-16 rounded-full object-cover shadow-xl"
+						src={review.image}
+						alt="avatar"
+					/>
+					<span class="ml-4">{review.username}</span>
+				</div>
+
+				<p class="my-2">{review.comment}</p>
+
+				<p class="my-2">
+					{review.status} | rating: {review.rating} | posted: {review.createdAt}
+				</p>
+			</Card>
+		))
+	}
+</section>

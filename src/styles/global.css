@@ -1,0 +1,24 @@
+:root {
+  --lite-blue: #F6F9FF;
+  --dark-blue: #10154E;
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+  --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+
+  --color-text: hsl(12, 5%, 4%);
+  --color-bg: hsl(10, 21%, 95%);
+  --color-border: hsl(17, 24%, 90%);
+}
+
+#main {
+  background-color: var(--lite-blue);
+  min-height: 100vh;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
