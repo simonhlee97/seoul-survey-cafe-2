@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro'
+import SideMenu from '../components/dashboard/SideMenu.astro'
+import Profile from '../components/dashboard/Profile.astro'
+---
+
+<Layout>
+	<div class="text-center pt-8">
+		<img
+			src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
+			class="rounded-full w-32 mb-4 mx-auto"
+			alt="Avatar"
+		/>
+		<h5 class="text-xl font-medium leading-tight mb-2">John Doe</h5>
+		<p class="text-gray-500">
+			<span class="badge lite">Seoul-Itaewon</span> | <span class="badge dark">Expat</span>
+		</p>
+	</div>
+
+	<h1 class="page-header text-center py-8">My Dashboard (Example)</h1>
+
+	<div class="flex p-5">
+		<section class="left flex-none w-72 border-red-300 border-2 p-4">
+			<SideMenu />
+		</section>
+
+		<section class="right border-blue-600 border-2 flex-1 p-4">
+			<Profile />
+		</section>
+	</div>
+</Layout>

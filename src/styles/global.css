@@ -14,6 +14,34 @@
   background-color: var(--lite-blue);
   min-height: 100vh;
 }
+.badge {
+  background-color: #2563EB;
+  color: #ffffff;
+  display: inline-block;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+}
+.badge.lite {
+  background-color: #E5E7EB;
+  color: #374151;
+}
+.badge.dark {
+  background-color: #1F2937;
+  color: #ffffff;
+}
+.badge.danger {
+  background-color: #DC2626;
+}
 
 .card {
   background: #fff;
@@ -21,4 +49,88 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+.text-input {
+  padding: 1rem;
+  padding-right: 3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-color: #E5E7EB;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.btn-blue {
+  padding: 0.625rem 1.5rem;
+  background-color: #2563EB;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.btn-blue:hover {
+  background-color: #1D4ED8;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.page-header {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  
+  @media (min-width: 640px) {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.stat-card {
+  width: 20rem;
+  position: relative;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 0.125rem;
+  border-top-width: 4px;
+  border-color: #DB2777;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+input[type=text],input[type=number],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
 }

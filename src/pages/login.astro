@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Seoul Survey Cafe - Login Page">
+	<div class="empty"></div>
+	<div class="login-parent">
+		<div class="login-child">
+			<div
+				class="mb-6 p-4 border rounded text-sky-700 bg-sky-50 border-sky-900/10 text-center"
+				role="alert"
+			>
+				<strong class="text-xl font-medium">Seoul Survey Cafe - Login</strong>
+			</div>
+			<form>
+				<div class="form-group mb-6">
+					<label
+						for="exampleInputEmail2"
+						class="form-label inline-block mb-2 text-gray-200">Email address</label
+					>
+					<input
+						type="email"
+						class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-200 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-200 focus:bg-white focus:border-blue-600 focus:outline-none"
+						id="exampleInputEmail2"
+						aria-describedby="emailHelp"
+						placeholder="Enter email"
+					/>
+				</div>
+				<div class="form-group mb-6">
+					<label
+						for="exampleInputPassword2"
+						class="form-label inline-block mb-2 text-gray-200">Password</label
+					>
+					<input
+						type="password"
+						class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-200 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-200 focus:bg-white focus:border-blue-600 focus:outline-none"
+						id="exampleInputPassword2"
+						placeholder="Password"
+					/>
+				</div>
+				<div class="flex justify-between items-center mb-6">
+					<div class="form-group form-check">
+						<input
+							type="checkbox"
+							class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+							id="exampleCheck2"
+						/>
+						<label
+							class="form-check-label inline-block text-gray-800"
+							for="exampleCheck2">Remember me</label
+						>
+					</div>
+					<a
+						href="#!"
+						class="text-blue-600 hover:text-blue-200 focus:text-blue-200 transition duration-200 ease-in-out"
+						>Forgot password?</a
+					>
+				</div>
+				<button type="submit" class="btn-blue">Sign in</button>
+				<p class="text-gray-800 mt-6 text-center">
+					Not a member? <a
+						href="#!"
+						class="text-blue-600 hover:text-blue-200 focus:text-blue-200 transition duration-200 ease-in-out"
+						>Register</a
+					>
+				</p>
+			</form>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.empty {
+		height: 4em;
+	}
+	.login-parent {
+		margin: 0 auto;
+		padding: 3rem;
+		display: grid;
+		place-items: center;
+		width: 75vw;
+		height: 70vh;
+		overflow: auto;
+		background: grey;
+		background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Yonsei_university_in_Seoul%2C_South_korea_03.JPG');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.login-child {
+		padding: 3rem;
+		border-radius: 10px;
+		border: 1px solid gray;
+		color: #f1f1f1;
+		/* background: lightpink; */
+		text-align: center;
+		background: rgb(0, 0, 0); /* Fallback color */
+		background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+	}
+</style>

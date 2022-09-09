@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Stepper from '../components/forms/Stepper.astro'
+---
+
+<Layout title="Write a Review">
+	<div class="page-container">
+		<h2 class="py-8 page-header text-center">
+			Which district in Seoul would you like to review?
+		</h2>
+
+		<select class="block w-full">
+			<option value="Songpa-gu">Songpa-gu</option>
+			<option value="Gangseo-gu">Gangseo-gu</option>
+			<option value="Nowon-gu">Nowon-gu</option>
+			<option value="Gangnam-gu">Gangnam-gu</option>
+			<option value="Gwanak-gu">Gwanak-gu</option>
+			<option value="Eunpyeong-gu">Eunpyeong-gu</option>
+			<option value="Yangcheon-gu">Yangcheon-gu</option>
+			<option value="Gangdong-gu">Gangdong-gu</option>
+			<option value="Seongbuk-gu">Seongbuk-gu</option>
+			<option value="Guro-gu">Guro-gu</option>
+			<option value="Seocho-gu">Seocho-gu</option>
+			<option value="Jungnang-gu">Jungnang-gu</option>
+			<option value="Yeongdeungpo-gu">Yeongdeungpo-gu</option>
+			<option value="Dongjak-gu">Dongjak-gu</option>
+			<option value="Mapo-gu">Mapo-gu</option>
+			<option value="Gwangjin-gu">Gwangjin-gu</option>
+			<option value="Dongdaemun-gu">Dongdaemun-gu</option>
+			<option value="Dobong-gu">Dobong-gu</option>
+			<option value="Gangbuk-gu">Gangbuk-gu</option>
+			<option value="Seodaemun-gu">Seodaemun-gu</option>
+			<option value="Seongdong-gu">Seongdong-gu</option>
+			<option value="Geumcheon-gu">Geumcheon-gu</option>
+			<option value="Yongsan-gu">Yongsan-gu</option>
+			<option value="Jongno-gu">Jongno-gu</option>
+			<option value="Jung-gu">Jung-gu</option>
+		</select>
+
+		<br />
+
+		<form class="p-4 border-2 border-gray-700">
+			<h3 class="pt-4">Please rate "Mapo-Gu" (on a scale of 1-10) on the following:</h3>
+			<small
+				><span class="badge">10 = Absolute Perfection</span> | <span class="badge lite"
+					>5 = Average</span
+				> | <span class="badge danger">1 = Absolutely terrible</span>
+			</small>
+
+			<div class="my-container">
+				<!-- Left content -->
+				<div class="container__half">
+					<label for="schools">public schools</label>
+					<input type="number" placeholder="public schools" />
+
+					<label for="affordability">affordability / cost of living</label>
+					<input type="number" placeholder="affordability" />
+
+					<label for="parks">parks & outdoor recreation</label>
+					<input
+						type="number"
+						placeholder="parks, outdoor recreation, bike paths, etc."
+					/>
+
+					<label for="transportation">public transporation</label>
+					<input type="number" placeholder="public transportation" />
+				</div>
+
+				<!-- Right content -->
+				<div class="container__half">
+					<label for="diversity">diverse range of cultures</label>
+					<input type="number" placeholder="diversity" />
+
+					<label for="social">nightlife, social activities and groups</label>
+					<input type="number" placeholder="nightlife, social activities" />
+
+					<label for="friendliness">friendly people and sense of community</label>
+					<input type="number" placeholder="friendliness and senese of community" />
+
+					<label for="families">kid-friendly community</label>
+					<input type="number" placeholder="good for families, children" />
+				</div>
+			</div>
+			<button class="btn-blue">Submit Review</button>
+		</form>
+	</div>
+</Layout>
+
+<style>
+	input {
+		margin: 1.5em;
+	}
+	.page-container {
+		padding: 0 3em;
+	}
+	.my-container {
+		display: flex;
+		flex-wrap: wrap;
+		/* text-align: center; */
+	}
+
+	.container__half {
+		padding: 2em;
+		flex: 1;
+	}
+</style>

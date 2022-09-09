@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Seoul Survey Cafe - Login Page">
+	<div class="login-parent">
+		<div class="login-child">
+			<div
+				class="mb-6 p-4 text-green-700 border rounded border-green-900/10 bg-green-50 text-center"
+				role="alert"
+			>
+				<strong class="text-xl font-medium">Seoul Survey Cafe - Sign up</strong>
+			</div>
+			<form>
+				<div class="form-group mb-6">
+					<input
+						type="text"
+						class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+						id="exampleInput125"
+						placeholder="username"
+					/>
+				</div>
+				<div class="form-group mb-6">
+					<input
+						type="email"
+						class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+						id="exampleInput125"
+						placeholder="Email address"
+					/>
+				</div>
+				<div class="form-group mb-6">
+					<input
+						type="password"
+						class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+						id="exampleInput126"
+						placeholder="Password"
+					/>
+				</div>
+				<div class="form-group form-check text-center mb-6">
+					<input
+						type="checkbox"
+						class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
+						id="exampleCheck25"
+						checked
+					/>
+					<label class="form-check-label inline-block text-gray-800" for="exampleCheck25"
+						>Subscribe to our newsletter</label
+					>
+				</div>
+				<button type="submit" class="btn-blue">Sign up</button>
+			</form>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.login-parent {
+		margin: 0 auto;
+		padding: 3rem;
+		display: grid;
+		place-items: center;
+		width: 100vw;
+		height: 100vh;
+		overflow: auto;
+		background: grey;
+		background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Yonsei_university_in_Seoul%2C_South_korea_03.JPG');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.login-child {
+		padding: 3rem;
+		border-radius: 10px;
+		border: 1px solid gray;
+		color: #f1f1f1;
+		/* background: lightpink; */
+		text-align: center;
+		background: rgb(0, 0, 0); /* Fallback color */
+		background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+	}
+</style>

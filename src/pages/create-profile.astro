@@ -1,0 +1,167 @@
+---
+import Layout from '../layouts/Layout.astro'
+const isCurrentCitySeoul = true
+---
+
+<Layout title="Create A Profile">
+	<div class="px-4 py-16 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
+		<div class="max-w-lg mx-auto text-center">
+			<h1 class="text-2xl font-bold sm:text-3xl">Complete your profile!</h1>
+
+			<p class="mt-4 text-gray-500">Your public profile</p>
+		</div>
+
+		<form class="max-w-md mx-auto mt-8 mb-0 space-y-4">
+			<!-- <div class="flex justify-center"> -->
+			<div class="mb-8 w-full">
+				<label for="formFile" class="form-label inline-block mb-2 text-gray-700"
+					>Upload Your Photo</label
+				>
+				<input
+					class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+					type="file"
+					id="formFile"
+				/>
+			</div>
+			<!-- </div> -->
+
+			<div class="flex justify-between">
+				<div class="form-check form-check-inline">
+					<input
+						class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+						type="radio"
+						name="inlineRadioOptions"
+						id="inlineRadio1"
+						value="option1"
+					/>
+					<label class="form-check-label inline-block text-gray-800" for="inlineRadio10"
+						>I live in Seoul</label
+					>
+				</div>
+				<div class="form-check form-check-inline">
+					<input
+						class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+						type="radio"
+						name="inlineRadioOptions"
+						id="inlineRadio2"
+						value="option2"
+					/>
+					<label class="form-check-label inline-block text-gray-800" for="inlineRadio20"
+						>I live outside of Seoul</label
+					>
+				</div>
+			</div>
+
+			{
+				isCurrentCitySeoul ? (
+					<div class="formblock my-4">
+						<p class="my-4">Which district of Seoul are you currently living in?</p>
+						<select class="block w-full">
+							<option value="Songpa-gu">Songpa-gu</option>
+							<option value="Gangseo-gu">Gangseo-gu</option>
+							<option value="Nowon-gu">Nowon-gu</option>
+							<option value="Gangnam-gu">Gangnam-gu</option>
+							<option value="Gwanak-gu">Gwanak-gu</option>
+							<option value="Eunpyeong-gu">Eunpyeong-gu</option>
+							<option value="Yangcheon-gu">Yangcheon-gu</option>
+							<option value="Gangdong-gu">Gangdong-gu</option>
+							<option value="Seongbuk-gu">Seongbuk-gu</option>
+							<option value="Guro-gu">Guro-gu</option>
+							<option value="Seocho-gu">Seocho-gu</option>
+							<option value="Jungnang-gu">Jungnang-gu</option>
+							<option value="Yeongdeungpo-gu">Yeongdeungpo-gu</option>
+							<option value="Dongjak-gu">Dongjak-gu</option>
+							<option value="Mapo-gu">Mapo-gu</option>
+							<option value="Gwangjin-gu">Gwangjin-gu</option>
+							<option value="Dongdaemun-gu">Dongdaemun-gu</option>
+							<option value="Dobong-gu">Dobong-gu</option>
+							<option value="Gangbuk-gu">Gangbuk-gu</option>
+							<option value="Seodaemun-gu">Seodaemun-gu</option>
+							<option value="Seongdong-gu">Seongdong-gu</option>
+							<option value="Geumcheon-gu">Geumcheon-gu</option>
+							<option value="Yongsan-gu">Yongsan-gu</option>
+							<option value="Jongno-gu">Jongno-gu</option>
+							<option value="Jung-gu">Jung-gu</option>
+						</select>
+					</div>
+				) : (
+					<p>Can access "visitor's survey" only</p>
+				)
+			}
+
+			<div class="flex justify-start border border-solid border-gray-300 p-2">
+				<div>
+					<h3 class="my-3 border-b border-solid border-gray-300">Your Age Range</h3>
+					<div class="form-check">
+						<input
+							class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+							type="radio"
+							name="age1"
+							id="age1"
+						/>
+						<label class="form-check-label inline-block text-gray-800" for="age1">
+							60+
+						</label>
+					</div>
+
+					<div class="form-check">
+						<input
+							class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+							type="radio"
+							name="age2"
+							id="age2"
+						/>
+						<label class="form-check-label inline-block text-gray-800" for="age2">
+							50-59
+						</label>
+					</div>
+
+					<div class="form-check">
+						<input
+							class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+							type="radio"
+							name="age3"
+							id="age3"
+						/>
+						<label class="form-check-label inline-block text-gray-800" for="age3">
+							40-49
+						</label>
+					</div>
+
+					<div class="form-check">
+						<input
+							class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+							type="radio"
+							name="age4"
+							id="age4"
+						/>
+						<label class="form-check-label inline-block text-gray-800" for="age4">
+							30-39
+						</label>
+					</div>
+
+					<div class="form-check">
+						<input
+							class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+							type="radio"
+							name="age5"
+							id="age5"
+							checked
+						/>
+						<label class="form-check-label inline-block text-gray-800" for="age5">
+							18-29
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-8 w-full">
+				<input type="text" class="text-input" placeholder="twitter (optional)" />
+			</div>
+
+			<div>
+				<button disabled type="submit" class="btn-blue">Save Profile</button>
+			</div>
+		</form>
+	</div>
+</Layout>
